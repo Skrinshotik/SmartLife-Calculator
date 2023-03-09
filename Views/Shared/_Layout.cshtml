@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SmartLife_Calculator</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link href="~/css/ecologystyle.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg NavMenu">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="">
+                        <a class="nav-link nav-item MenuNavButton " asp-controller="Home" asp-action="Index">🏢</a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link nav-item MenuNavButton NavCalcButton" asp-controller="EcologyCalc" asp-action="Index"> Ecology</a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link nav-item MenuNavButton NavCalcButton" asp-controller="FinanceCalc" asp-action="Index">Finance</a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link nav-item MenuNavButton NavCalcButton" asp-controller="FitnessCalc" asp-action="Index">Fitness</a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link nav-item MenuNavButton NavCalcButton" asp-controller="HealthCalc" asp-action="Index">Health</a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link nav-item MenuNavButton NavCalcButton" asp-controller="ProductivityCalc" asp-action="Index">Productivity</a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link nav-item MenuNavButton NavCalcButton" asp-controller="SecurityCalc" asp-action="Index">Security</a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link nav-item MenuNavButton ">🚕</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - SmartLife_Calculator
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

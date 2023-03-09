@@ -1,0 +1,16 @@
+﻿@{
+    string CurrentControllerName = Convert.ToString(ViewContext.HttpContext.Request.RouteValues["Controller"]);
+    switch (CurrentControllerName.Contains("Calc"))
+    {
+        case true:
+            {
+                Layout = "~/Views/Shared/_Layout.cshtml";
+                break;
+            }
+        case false:
+            {
+                Layout = "~/Views/Shared/_Layout.cshtml";
+                break;
+            }
+    }
+}
